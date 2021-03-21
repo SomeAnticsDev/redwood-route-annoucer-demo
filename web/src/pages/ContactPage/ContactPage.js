@@ -39,6 +39,7 @@ const ContactPage = () => {
 
   return (
     <BlogLayout>
+      <h1 className="text-xl text-blue-700 font-semibold mb-2">Contact</h1>
       <Flash timeout={1000} className="bg-green-100 text-green-700" />
       <Form
         onSubmit={onSubmit}
