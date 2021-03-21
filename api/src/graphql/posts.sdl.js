@@ -2,22 +2,26 @@ export const schema = gql`
   type Post {
     id: Int!
     title: String!
+    slug: String!
     body: String!
     createdAt: DateTime!
   }
 
   type Query {
     posts: [Post!]!
-    post(id: Int!): Post
+    postById(id: Int!): Post
+    postBySlug(slug: String!): Post
   }
 
   input CreatePostInput {
     title: String!
+    slug: String
     body: String!
   }
 
   input UpdatePostInput {
     title: String
+    slug: String
     body: String
   }
 

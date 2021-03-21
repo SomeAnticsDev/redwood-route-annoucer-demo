@@ -5,9 +5,15 @@ export const posts = () => {
   return db.post.findMany()
 }
 
-export const post = ({ id }) => {
+export const postById = ({ id }) => {
   return db.post.findUnique({
     where: { id },
+  })
+}
+
+export const postBySlug = ({ slug }) => {
+  return db.post.findUnique({
+    where: { slug },
   })
 }
 

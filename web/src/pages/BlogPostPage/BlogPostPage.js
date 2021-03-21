@@ -1,10 +1,10 @@
 import BlogLayout from 'src/layouts/BlogLayout'
 import BlogPostCell from 'src/components/BlogPostCell'
 
-const BlogPostPage = ({ id }) => {
+const BlogPostPage = ({ slug }) => {
   return (
     <BlogLayout>
-      <BlogPostCell id={id} />
+      <BlogPostCell slug={slug} />
     </BlogLayout>
   )
 }

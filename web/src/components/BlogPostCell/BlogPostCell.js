@@ -1,10 +1,11 @@
 import BlogPost from 'src/components/BlogPost'
 
 export const QUERY = gql`
-  query BlogPostQuery($id: Int!) {
-    post(id: $id) {
+  query BlogPostQuery($slug: String!) {
+    post: postBySlug(slug: $slug) {
       id
       title
+      slug
       body
       createdAt
     }
