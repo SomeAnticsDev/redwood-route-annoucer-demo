@@ -2,7 +2,7 @@
 
 ```
 git clone https://github.com/jtoar/redwood-route-annoucer-demo.git
-cd redwood-tutorial
+cd redwood-route-annoucer-demo
 yarn install
 yarn rw prisma migrate dev
 yarn rw prisma db seed
@@ -21,6 +21,7 @@ git checkout diy-route-announcer
 
 ```
 git checkout canary
+yarn install
 ```
 
 ## Prior Art
