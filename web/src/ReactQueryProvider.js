@@ -1,5 +1,4 @@
 import { QueryClientProvider, QueryClient, useQuery } from 'react-query'
-import { ReactQueryDevtools } from 'react-query/devtools'
 import {
   FetchConfigProvider,
   useFetchConfig,
@@ -30,7 +29,6 @@ const useQueryAdapter = (
 }
 
 const queryClient = new QueryClient()
-window.queryClient = queryClient
 
 const ReactQueryProvider = ({ children }) => {
   return (
@@ -38,7 +36,6 @@ const ReactQueryProvider = ({ children }) => {
       <FetchConfigProvider>
         <GraphQLHooksProvider useQuery={useQueryAdapter}>
           {children}
-          <ReactQueryDevtools />
         </GraphQLHooksProvider>
       </FetchConfigProvider>
     </QueryClientProvider>
