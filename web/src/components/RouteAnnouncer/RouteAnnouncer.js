@@ -14,22 +14,10 @@ const RouteAnnouncer = () => {
   }, [pathname])
 
   return (
-    <div styles={srOnlyStyles} aria-live="assertive" aria-atomic>
+    <div className="sr-only" aria-live="assertive" aria-atomic>
       {announcement}
     </div>
   )
 }
 
 export default RouteAnnouncer
-
-const srOnlyStyles = {
-  position: 'absolute',
-  top: 0,
-  width: 1,
-  height: 1,
-  padding: 0,
-  overflow: 'hidden',
-  clip: 'rect(0, 0, 0, 0)',
-  whiteSpace: 'nowrap',
-  border: 0,
-}
