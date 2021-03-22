@@ -1,4 +1,5 @@
 import BlogPost from 'src/components/BlogPost'
+import { queryClient } from 'src/ReactQueryProvider'
 
 export const QUERY = gql`
   query BlogPostQuery($slug: String!) {
@@ -11,6 +12,18 @@ export const QUERY = gql`
     }
   }
 `
+
+export const beforeQuery = (variables) => {
+  return {
+    variables,
+    placeholderData: () => {
+      const post = queryClient
+        .getQueryData(['BlogPostsQuery', {}])
+        ?.posts.find((d) => d.slug === variables.slug)
+      return { post }
+    },
+  }
+}
 
 export const Loading = () => <div>Loading...</div>
 

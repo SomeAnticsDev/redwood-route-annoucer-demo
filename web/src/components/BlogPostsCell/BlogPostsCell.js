@@ -12,6 +12,12 @@ export const QUERY = gql`
   }
 `
 
+export const beforeQuery = (variables) => {
+  return {
+    variables,
+  }
+}
+
 export const Loading = () => <div>Loading...</div>
 
 export const Empty = () => <div>Empty</div>
