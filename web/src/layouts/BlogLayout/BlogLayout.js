@@ -1,8 +1,10 @@
 import { Link, routes } from '@redwoodjs/router'
+// import RouteAnnouncer from 'src/components/RouteAnnouncer'
 
 const BlogLayout = ({ children }) => {
   return (
     <>
+      {/* <RouteAnnouncer /> */}
       <header className="relative flex justify-between items-center py-4 px-8 bg-blue-700 text-white">
         <Link
           className="text-5xl font-semibold tracking-tight text-blue-400 hover:text-blue-100 transition duration-100"

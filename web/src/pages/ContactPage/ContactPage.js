@@ -10,6 +10,7 @@ import {
 // import { Flash, useFlash } from '@redwoodjs/web'
 import { useForm } from 'react-hook-form'
 import BlogLayout from 'src/layouts/BlogLayout'
+import { RouteAnnouncement } from '@redwoodjs/router'
 
 // const CREATE_CONTACT = gql`
 //   mutation CreateContactMutation($input: CreateContactInput!) {
@@ -41,6 +42,7 @@ const ContactPage = () => {
     <BlogLayout>
       <h1 className="text-xl text-blue-700 font-semibold mb-2">Contact</h1>
       {/* <Flash timeout={1000} className="bg-green-100 text-green-700" /> */}
+      <RouteAnnouncement visuallyHidden>Get in touch with us</RouteAnnouncement>
       <Form
         onSubmit={onSubmit}
         validation={{ mode: 'onBlur' }}
